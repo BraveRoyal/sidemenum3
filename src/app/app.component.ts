@@ -12,9 +12,9 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 export class AppComponent implements OnInit {
   public appPages = [
     {
-      title: 'Spam',
-      url: '/folder/Spam',
-      icon: 'warning'
+      title: 'Categorias',
+      url: '/categorias',
+      icon: 'home'
     }
   ];
 
