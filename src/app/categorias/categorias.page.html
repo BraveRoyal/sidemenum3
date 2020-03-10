@@ -8,5 +8,10 @@
 </ion-header>
 
 <ion-content>
-  <p>Pagina De Categorias</p>
+  <ion-list>
+  <ion-item *ngFor="let item of itens" (click)='abrirpagina(item.path)'>
+    <ion-icon [name]='item.icon' class="a"></ion-icon>
+    <ion-label>{{item.nome}}</ion-label>
+  </ion-item>
+</ion-list>
 </ion-content>

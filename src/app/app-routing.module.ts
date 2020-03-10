@@ -14,6 +14,10 @@ const routes: Routes = [
   {
     path: 'categorias',
     loadChildren: () => import('./categorias/categorias.module').then( m => m.CategoriasPageModule)
+  },
+  {
+    path: 'banco-de-dados',
+    loadChildren: () => import('./banco-de-dados/banco-de-dados.module').then( m => m.BancoDeDadosPageModule)
   }
 ];
 
