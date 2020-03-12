@@ -13,7 +13,11 @@ export class CategoriasPage implements OnInit {
   constructor(private navCtrl:NavController,private danilo123:AlertasService) { }
 
   ngOnInit() {
-    this.itens = this.danilo123.categorias();
+    this.danilo123.categorias()
+    .then(e=>{
+      this.itens = JSON.parse(e.data)
+    }
+    )
   }
   abrirpagina(path){
     this.navCtrl.navigateForward(`/${path}`)

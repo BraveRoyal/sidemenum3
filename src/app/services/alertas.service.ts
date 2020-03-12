@@ -1,35 +1,17 @@
 import { Injectable } from '@angular/core';
+import { HTTP } from '@ionic-native/http/ngx';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AlertasService {
 
-  constructor() { }
+  constructor(private http: HTTP) { }
 
   mostraralerta(){
     alert('a')
   }
   categorias():any{
-    return [
-      {
-        nome:'banco de dados',
-        detalhe:'corre',
-        icon:"man-outline",
-        path:'banco-de-dados'
-      },
-      {
-        nome:'lapis',
-        detalhe:'escrever',
-        icon:'pencil-outline',
-        path:'login'
-      },
-      {
-        nome:'camera',
-        detalhe:'foto',
-        icon:'camera-outline',
-        path:'login'
-      }
-    ];
+    return this.http.get('https://jsonplaceholder.typicode.com/photos',{},{});
   }
 }
